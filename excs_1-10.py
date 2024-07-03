@@ -1,7 +1,7 @@
 import re
 # Exercices from https://www.w3resource.com/python-exercises/re/
 
-
+# Arquivo with changes for test github
 # 1. Write a Python program to check that a string contains only a certain set of characters
 # (in this case a-z, A-Z and 0-9).
 def match_str(_str):
