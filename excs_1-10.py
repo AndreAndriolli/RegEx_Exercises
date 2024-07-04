@@ -10,8 +10,9 @@ def match_str(_str):
     # pattern = re.compile(r'[\d\w]+')  # Considering that need accent on the words and also can use some special carct
     # like '_'
     match = re.search(pattern, _str)
-    print(match)
-    print(match.group())
+    if match:
+        print(match)
+        print(match.group())
     return match.group() is _str
 
 
@@ -20,9 +21,8 @@ def match_str2(_str):
     pattern = re.compile(r'ab*')
     match = re.search(pattern, _str)
     if match:
-        # print(match)
-        # print(match.group())
-        pass
+        print(match)
+        print(match.group())
     return match is not None
 
 
@@ -31,9 +31,8 @@ def match_str3(_str):
     pattern = re.compile(r'ab+')
     match = re.search(pattern, _str)
     if match:
-        # print(match)
-        # print(match.group())
-        pass
+        print(match)
+        print(match.group())
     return match is not None
 
 
@@ -41,6 +40,7 @@ def match_str3(_str):
 def match_str4(_str):
     pattern = re.compile(r'ab*')
     matches = re.findall(pattern, _str)
+    print(matches)
     if not matches:
         return False
     return all(match == 'a' or match == 'b' for match in matches)
@@ -51,8 +51,8 @@ def match_str5(_str):
     pattern = re.compile(r'abbb')
     match = re.search(pattern, _str)
     if match:
-        # print(match)
-        # print(match.group())
+        print(match)
+        print(match.group())
         pass
     return True if match is not None else False
 
@@ -62,8 +62,8 @@ def match_str6(_str):
     pattern = re.compile(r'ab{2,3}')
     match = re.search(pattern, _str)
     if match:
-        # print(match)
-        # print(match.group())
+        print(match)
+        print(match.group())
         pass
     return match is not None
 
@@ -102,7 +102,7 @@ def match_str10(_str):
 if __name__ == "__main__":
     # Obs.: All exercises were done considering case sensitivity as True
     test = AutoTests.test_reg_ex_funcs  # Initialize the test class
-    test_func = 10  # Change this value for decide what funct you pretend to test.
+    test_func = 1  # Change this value for decide what funct you pretend to test.
     print(f'Actual test func num:{test_func} \n')
 
     # Auto Tests f_1 - Just return True if the input str is [A-Za-z0-9]
